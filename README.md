@@ -97,61 +97,56 @@ Once all inputs are valid, the agent produces a structured JSON payload:
 
 Schemas ensure correctness and prevent invalid submissions.
 
-OAuth Handling (Mocked)
+## OAuth Handling (Mocked)
 
 The project simulates a TikTok OAuth Authorization Code flow and handles:
 
-Invalid client ID / secret
-
-Missing Ads permission scope
-
-Expired or revoked access token
-
-Geo-restriction (403)
+- Invalid client ID / secret  
+- Missing Ads permission scope  
+- Expired or revoked access token  
+- Geo-restriction (403)  
 
 Instead of exposing raw errors, the agent:
 
-Explains the issue in plain language
+- Explains the issue in plain language  
+- Suggests corrective actions  
+- Distinguishes retryable vs non-retryable errors  
 
-Suggests corrective actions
+---
 
-Distinguishes retryable vs non-retryable errors
-
-Submission & Failure Handling
+## Submission & Failure Handling
 
 Ad submission is attempted via a mocked TikTok Ads API.
 
 The agent handles:
 
-Invalid OAuth tokens
-
-Missing permissions
-
-Invalid music IDs
-
-Geo-restricted campaigns
+- Invalid OAuth tokens  
+- Missing permissions  
+- Invalid music IDs  
+- Geo-restricted campaigns  
 
 For each failure, the agent:
 
-Interprets the error
+- Interprets the error  
+- Explains it clearly to the user  
+- Decides whether retry is possible or blocked  
 
-Explains it clearly to the user
+---
 
-Decides whether retry is possible or blocked
+## LLM Usage
 
-LLM Usage
-
-The system optionally integrates Gemini for language generation
-
-The LLM is not used for validation or business decisions
-
-All rules and constraints are enforced deterministically in code
+- The system optionally integrates Gemini for language generation  
+- The LLM is not used for validation or business decisions  
+- All rules and constraints are enforced deterministically in code  
 
 This ensures reliability and prevents hallucination-based failures.
 
+---
 
-How to Run
-Install dependencies
+## How to Run
+
+### Install dependencies
+```bash
 pip install -r requirements.txt
 
 Run the agent
@@ -174,5 +169,3 @@ Token refresh automation
 Persistent session storage
 
 Richer conversational responses using the LLM
-
-Web-based interface

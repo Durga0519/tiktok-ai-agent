@@ -31,14 +31,13 @@ The agent simulates a production-ready workflow for creating TikTok Ads by:
 
 ## Project Structure
 
-app/
-├── main.py # CLI conversation flow and orchestration
-├── schemas.py # Structured output using Pydantic
-├── rules.py # Business rule enforcement (music logic)
-├── oauth.py # Mocked OAuth Authorization Code flow
-├── tiktok_api.py # Mocked TikTok Ads API
-├── errors.py # Error interpretation and messaging
-├── agent.py # Optional LLM integration (Gemini)
+- main.py # CLI conversation flow and orchestration
+- schemas.py # Structured output using Pydantic
+- rules.py # Business rule enforcement (music logic)
+- oauth.py # Mocked OAuth Authorization Code flow
+- tiktok_api.py # Mocked TikTok Ads API
+- errors.py # Error interpretation and messaging
+- agent.py # Optional LLM integration (Gemini)
 
 
 ---
@@ -175,6 +174,7 @@ With more time, the project could include:
 - Token refresh automation
 - Persistent session storage
 - Richer conversational responses using the LLM
+
 
 
 

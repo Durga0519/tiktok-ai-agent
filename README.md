@@ -98,6 +98,8 @@ Once all inputs are valid, the agent produces a structured JSON payload:
 
 Schemas ensure correctness and prevent invalid submissions.
 
+---
+
 ## OAuth Handling (Mocked)
 
 The project simulates a TikTok OAuth Authorization Code flow and handles:
@@ -172,5 +174,6 @@ With more time, the project could include:
 - Token refresh automation
 - Persistent session storage
 - Richer conversational responses using the LLM
+
 
 

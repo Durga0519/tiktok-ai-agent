@@ -95,10 +95,7 @@ Once all inputs are valid, the agent produces a structured JSON payload:
   }
 }
 
-
-Schemas ensure correctness and prevent invalid submissions.
-
----
+```
 
 ## OAuth Handling (Mocked)
 
@@ -153,10 +150,14 @@ For each failure, the agent:
 ```bash
 pip install -r requirements.txt
 
+```
+
 2. Run the agent:
 
 ```bash
 python app/main.py
+
+```
 
 ## Notes
 
@@ -174,6 +175,7 @@ With more time, the project could include:
 - Token refresh automation
 - Persistent session storage
 - Richer conversational responses using the LLM
+
 
 
 
